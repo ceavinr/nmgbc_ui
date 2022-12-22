@@ -6,10 +6,10 @@ function Navbar() {
       <div className="w-[40px] md:w-[60px]">
         <img src="/img/logo.png" alt="" />
       </div>
-      <div className="flex gap-6 text-xs md:text-2xl">
-        <a href="">About</a>
-        <a href="">Registration</a>
-        <a href="">Booklet</a>
+      <div className="flex gap-6 text-xs md:text-xl lg:text-2xl">
+        <a href="/">About</a>
+        <a href="/registration">Registration</a>
+        <a href="/booklet">Booklet</a>
       </div>
     </div>
   );

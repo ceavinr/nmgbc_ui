@@ -5,8 +5,12 @@ function Event(props) {
     <div className="bg-[#FFF3BF] px-6 py-1 md:py-2">
       <div className="flex justify-between md:justify-end items-center gap-2">
         <div className="font-Volkswagen space-y-2">
-          <h1 className="md:text-right md:text-2xl">{props.children}</h1>
-          <h2 className="text-sm md:text-xl md:text-right">Learn more</h2>
+          <h1 className="md:text-right md:text-xl xl:text-2xl">
+            {props.children}
+          </h1>
+          <h2 className="text-sm md:text-base xl:text-xl md:text-right">
+            Learn more
+          </h2>
         </div>
         <div className="flex items-center">
           <img

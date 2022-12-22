@@ -1,11 +1,10 @@
 import React from "react";
 import Hero from "../components/Hero";
 import Event from "../components/Event";
-import Footer from "../components/Footer";
 
 function Home() {
   return (
-    <div className="">
+    <div className="min-h-screen">
       <Hero />
       <div className="divide-y-2 divide-[#FFCF4C] divide-dashed">
         <Event odd={true}>Biology Competition</Event>
@@ -13,7 +12,6 @@ function Home() {
         <Event odd={true}>Speech</Event>
         <Event>Event</Event>
       </div>
-      <Footer />
     </div>
   );
 }
