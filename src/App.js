@@ -1,10 +1,17 @@
+import React from "react";
 import "./App.css";
-import Home from "./pages/Home";
+import RoutesConfig from "./config/RoutesConfig";
+import Footer from "./components/Footer";
+import Navbar from "./components/Navbar";
 
 function App() {
   return (
     <div className="w-screen">
-      <Home />
+      <main>
+        <Navbar />
+        <RoutesConfig />
+      </main>
+      <Footer />
     </div>
   );
 }
