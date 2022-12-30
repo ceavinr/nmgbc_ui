@@ -14,35 +14,35 @@ exports.validasiPeserta = [
 
 // create peserta
 exports.buatPeserta = async (req, res) => {
-  // const errors = validationResult(req);
-  // if (!errors.isEmpty()) {
-  //   const err = new Error("Input tidak sesuai");
-  //   err.errorStatus = 400;
-  //   err.data = errors.array();
-  //   throw err;
-  // }
-
-  if (!req.files) {
-    const err = new Error("Upload image!");
-    err.errorStatus = 422;
-    throw err;
-  }
-
-  const peserta = new models.peserta({
-    email: req.body.email,
-    nama: req.body.nama,
-    ttl: req.body.ttl,
-    gender: req.body.gender,
-    sekolah: req.body.sekolah,
-    lomba: req.body.lomba,
-    idline: req.body.idline,
-    notelp: req.body.notelp,
-    kartu_identitas: req.files.kartu_identitas[0].path,
-    surat_keterangan: req.files.surat_keterangan[0].path,
-    bukti_pembayaran: req.files.bukti_pembayaran[0].path,
-    is_verified: false,
-  });
   try {
+    const errors = validationResult(req);
+    if (!errors.isEmpty()) {
+      const err = new Error("Input tidak sesuai");
+      err.errorStatus = 400;
+      err.data = errors.array();
+      throw err;
+    }
+
+    if (!req.files) {
+      const err = new Error("Upload image!");
+      err.errorStatus = 422;
+      throw err;
+    }
+
+    const peserta = new models.peserta({
+      email: req.body.email,
+      nama: req.body.nama,
+      ttl: req.body.ttl,
+      gender: req.body.gender,
+      sekolah: req.body.sekolah,
+      lomba: req.body.lomba,
+      idline: req.body.idline,
+      notelp: req.body.notelp,
+      kartu_identitas: req.files.kartu_identitas[0].path,
+      surat_keterangan: req.files.surat_keterangan[0].path,
+      bukti_pembayaran: req.files.bukti_pembayaran[0].path,
+      is_verified: false,
+    });
     const savePeserta = await peserta.save();
     res.status(201).send(savePeserta);
   } catch {
