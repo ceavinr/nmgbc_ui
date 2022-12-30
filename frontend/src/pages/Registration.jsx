@@ -79,7 +79,7 @@ export default function Registration() {
         <label>Jenis Kelamin</label>
         <select
           {...register("gender", { required: true })}
-          className="rounded-full border-2 mb-2 px-2 py-1 border-[#B59DED]"
+          className="rounded-full border-2 mb-2 px-2 py-1 border-[#B59DED] cursor-pointer"
         >
           <option value="">Select one</option>
           <option value="Laki-laki">Laki-laki</option>
@@ -93,7 +93,7 @@ export default function Registration() {
         <label>Lomba yang Dipilih</label>
         <select
           {...register("lomba", { required: true })}
-          className="rounded-full border-2 mb-2 px-2 py-1 border-[#B59DED]"
+          className="rounded-full border-2 mb-2 px-2 py-1 border-[#B59DED] cursor-pointer"
         >
           <option value="">Select one</option>
           <option value="Biology competition">Biology competition</option>
@@ -114,35 +114,77 @@ export default function Registration() {
             maxLength: 13,
           })}
         />
-        <img src={previewKartu} alt="" width={100} />
-        <label>Kartu pelajar/identitas</label>
+        {/* <img src={previewKartu} alt="" width={100} /> */}
+        <label
+          className="rounded-full border-2 mt-6 px-2 py-1 bg-white text-center border-[#B59DED] cursor-pointer transition hover:bg-[#d8d8d8]"
+          htmlFor="kartu"
+        >
+          Upload kartu pelajar/identitas
+        </label>
+        <a
+          className="mb-2 underline"
+          href={previewKartu}
+          target="_blank"
+          rel="noreferrer"
+        >
+          {kartu_identitas.name}
+        </a>
         <input
           type="file"
+          id="kartu"
           name="kartu_identitas"
-          className="mb-2 border-[#B59DED]"
+          className="hidden border-2 p-1 bg-white mb-2 border-[#B59DED]"
           required
           onChange={(e) => onKartuUpload(e)}
         />
-        <img src={previewSurat} alt="" width={100} />
-        <label>Surat keterangan sekolah</label>
+        {/* <img src={previewSurat} alt="" width={100} /> */}
+        <label
+          className="rounded-full border-2 px-2 py-1 bg-white text-center border-[#B59DED] cursor-pointer transition hover:bg-[#d8d8d8]"
+          htmlFor="surat"
+        >
+          Upload surat keterangan sekolah
+        </label>
+        <a
+          className="mb-2 underline"
+          href={previewSurat}
+          target="_blank"
+          rel="noreferrer"
+        >
+          {surat.name}
+        </a>
         <input
           type="file"
+          id="surat"
           name="surat_keterangan"
-          className="mb-2 border-[#B59DED]"
+          className="hidden border-2 p-1 bg-white mb-2 border-[#B59DED]"
           required
           onChange={(e) => onSuratUpload(e)}
         />
-        <img src={previewBukti} alt="" width={100} />
-        <label>Bukti pembayaran</label>
+        {/* <img src={previewBukti} alt="" width={100} /> */}
+        <label
+          className="rounded-full border-2 px-2 py-1 bg-white text-center border-[#B59DED] cursor-pointer transition hover:bg-[#d8d8d8]"
+          htmlFor="bukti"
+        >
+          Upload bukti pembayaran
+        </label>
+        <a
+          className="mb-2 underline"
+          href={previewBukti}
+          target="_blank"
+          rel="noreferrer"
+        >
+          {bukti.name}
+        </a>
         <input
           type="file"
+          id="bukti"
           name="bukti_pembayaran"
-          className="mb-2 border-[#B59DED]"
+          className="hidden border-2 p-1 bg-white mb-2 border-[#B59DED]"
           required
           onChange={(e) => onBuktiUpload(e)}
         />
         <input
-          className="rounded-full border-2 mt-4 px-2 py-1 text-[#E46871] border-black"
+          className="rounded-full border-2 mt-4 px-2 py-1 text-[#E46871] border-black cursor-pointer"
           type="submit"
         />
       </form>
