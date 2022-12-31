@@ -35,48 +35,47 @@ async function connection() {
   }
 }
 
-const multer = require("multer");
+// const multer = require("multer");
 
-const storage = multer.diskStorage({
-  destination: function (req, file, cb) {
-    cb(null, "uploads");
-  },
-  filename: function (req, file, cb) {
-    cb(null, new Date().getTime() + "-" + file.originalname);
-  },
-});
+// const storage = multer.diskStorage({
+//   destination: function (req, file, cb) {
+//     cb(null, "uploads");
+//   },
+//   filename: function (req, file, cb) {
+//     cb(null, new Date().getTime() + "-" + file.originalname);
+//   },
+// });
 
-const fileFilter = (req, file, cb) => {
-  if (
-    file.mimetype === "image/png" ||
-    file.mimetype === "image/jpg" ||
-    file.mimetype === "image/jpeg"
-  ) {
-    cb(null, true);
-  } else {
-    cb(null, false);
-  }
-};
+// const fileFilter = (req, file, cb) => {
+//   if (
+//     file.mimetype === "image/png" ||
+//     file.mimetype === "image/jpg" ||
+//     file.mimetype === "image/jpeg"
+//   ) {
+//     cb(null, true);
+//   } else {
+//     cb(null, false);
+//   }
+// };
 
-// public file
-const path = require("path");
-app.use("/uploads", express.static(path.join(__dirname, "uploads")));
-app.use(
-  multer({ storage: storage, fileFilter: fileFilter }).fields([
-    {
-      name: "kartu_identitas",
-      maxCount: 1,
-    },
-    {
-      name: "surat_keterangan",
-      maxCount: 1,
-    },
-    {
-      name: "bukti_pembayaran",
-      maxCount: 1,
-    },
-  ])
-);
+// const path = require("path");
+// app.use("/uploads", express.static(path.join(__dirname, "uploads")));
+// app.use(
+//   multer({ storage: storage, fileFilter: fileFilter }).fields([
+//     {
+//       name: "kartu_identitas",
+//       maxCount: 1,
+//     },
+//     {
+//       name: "surat_keterangan",
+//       maxCount: 1,
+//     },
+//     {
+//       name: "bukti_pembayaran",
+//       maxCount: 1,
+//     },
+//   ])
+// );
 
 const routes = require("./src/Routes");
 app.use("/api", routes);
