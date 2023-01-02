@@ -1,4 +1,5 @@
 import React from "react";
+import { HashLink } from "react-router-hash-link";
 
 function Event(props) {
   return (
@@ -8,9 +9,13 @@ function Event(props) {
           <h1 className="md:text-right md:text-xl xl:text-2xl">
             {props.children}
           </h1>
-          <h2 className="text-sm md:text-base xl:text-xl md:text-right">
-            Learn more
-          </h2>
+          <HashLink
+            smooth
+            to={props.link}
+            className="text-sm md:text-base xl:text-xl md:text-right"
+          >
+            <div className="md:text-right">Learn more</div>
+          </HashLink>
         </div>
         <div className="flex items-center">
           <img

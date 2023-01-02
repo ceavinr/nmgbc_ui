@@ -28,10 +28,14 @@ function Hero() {
       </div>
 
       <div className="divide-y-2 divide-[#FFCF4C] divide-dashed">
-        <Event odd={true}>Biology Competition</Event>
-        <Event>Public Poster</Event>
-        <Event odd={true}>Speech</Event>
-        <Event>Event</Event>
+        <Event link="about/#bio" odd={true}>
+          Biology Competition
+        </Event>
+        <Event link="about/#bio">Public Poster</Event>
+        <Event link="about/#speech" odd={true}>
+          Speech
+        </Event>
+        <Event link="">Event</Event>
       </div>
     </div>
   );
