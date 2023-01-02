@@ -1,15 +1,13 @@
 import React, { useState } from "react";
 import axios from "axios";
 import { useForm } from "react-hook-form";
+import Upload from "../components/Upload";
 
 export default function Registration() {
   const { register, handleSubmit } = useForm();
-  const [kartu_identitas, setKartuIdentitas] = useState("");
-  const [surat, setSurat] = useState("");
-  const [bukti, setBukti] = useState("");
-  const [previewKartu, setPreviewKartu] = useState(null);
-  const [previewSurat, setPreviewSurat] = useState(null);
-  const [previewBukti, setPreviewBukti] = useState(null);
+  // const [kartu, setKartu] = useState("");
+  // const [surat, setSurat] = useState("");
+  // const [bukti, setBukti] = useState("");
 
   const onSubmit = (data) => {
     console.log(data);
@@ -23,12 +21,13 @@ export default function Registration() {
     formData.append("lomba", data.lomba);
     formData.append("idline", data.idline);
     formData.append("notelp", data.notelp);
-    formData.append("kartu_identitas", kartu_identitas);
-    formData.append("surat_keterangan", surat);
-    formData.append("bukti_pembayaran", bukti);
+    formData.append("berkas", data.berkas);
+    // formData.append("kartu_identitas", kartu);
+    // formData.append("surat_keterangan", surat);
+    // formData.append("bukti_pembayaran", bukti);
 
     axios
-      .post("http://localhost:8080/api/register", formData, {
+      .post("http://nmgbc-backend.vercel.app/api/register", formData, {
         headers: {
           "content-type": "multipart/form-data",
         },
@@ -39,19 +38,6 @@ export default function Registration() {
       .catch((error) => {
         console.log(error);
       });
-  };
-
-  const onKartuUpload = (e) => {
-    setKartuIdentitas(e.target.files[0]);
-    setPreviewKartu(URL.createObjectURL(e.target.files[0]));
-  };
-  const onSuratUpload = (e) => {
-    setSurat(e.target.files[0]);
-    setPreviewSurat(URL.createObjectURL(e.target.files[0]));
-  };
-  const onBuktiUpload = (e) => {
-    setBukti(e.target.files[0]);
-    setPreviewBukti(URL.createObjectURL(e.target.files[0]));
   };
 
   return (
@@ -114,79 +100,27 @@ export default function Registration() {
             maxLength: 13,
           })}
         />
-        {/* <img src={previewKartu} alt="" width={100} /> */}
-        <label
-          className="rounded-full border-2 mt-6 px-2 py-1 bg-white text-center border-[#B59DED] cursor-pointer transition hover:bg-[#d8d8d8]"
-          htmlFor="kartu"
-        >
-          Upload kartu pelajar/identitas
-        </label>
-        <a
-          className="mb-2 underline"
-          href={previewKartu}
-          target="_blank"
-          rel="noreferrer"
-        >
-          {kartu_identitas.name}
-        </a>
+        <label>Link Berkas Pendaftaran</label>
         <input
-          type="file"
-          id="kartu"
-          name="kartu_identitas"
-          className="hidden border-2 p-1 bg-white mb-2 border-[#B59DED]"
-          required
-          onChange={(e) => onKartuUpload(e)}
+          className="rounded-full border-2 mb-2 px-2 py-1 border-[#B59DED]"
+          {...register("berkas", {
+            required: true,
+          })}
         />
-        {/* <img src={previewSurat} alt="" width={100} /> */}
-        <label
-          className="rounded-full border-2 px-2 py-1 bg-white text-center border-[#B59DED] cursor-pointer transition hover:bg-[#d8d8d8]"
-          htmlFor="surat"
-        >
-          Upload surat keterangan sekolah
-        </label>
-        <a
-          className="mb-2 underline"
-          href={previewSurat}
-          target="_blank"
-          rel="noreferrer"
-        >
-          {surat.name}
-        </a>
-        <input
-          type="file"
-          id="surat"
-          name="surat_keterangan"
-          className="hidden border-2 p-1 bg-white mb-2 border-[#B59DED]"
-          required
-          onChange={(e) => onSuratUpload(e)}
-        />
-        {/* <img src={previewBukti} alt="" width={100} /> */}
-        <label
-          className="rounded-full border-2 px-2 py-1 bg-white text-center border-[#B59DED] cursor-pointer transition hover:bg-[#d8d8d8]"
-          htmlFor="bukti"
-        >
-          Upload bukti pembayaran
-        </label>
-        <a
-          className="mb-2 underline"
-          href={previewBukti}
-          target="_blank"
-          rel="noreferrer"
-        >
-          {bukti.name}
-        </a>
-        <input
-          type="file"
-          id="bukti"
-          name="bukti_pembayaran"
-          className="hidden border-2 p-1 bg-white mb-2 border-[#B59DED]"
-          required
-          onChange={(e) => onBuktiUpload(e)}
-        />
+
         <input
           className="rounded-full border-2 mt-4 px-2 py-1 text-[#E46871] border-black cursor-pointer"
           type="submit"
         />
+        {/* <Upload uploadFile={kartu} setUploadFile={setKartu}>
+          Upload kartu pelajar/identitas
+        </Upload>
+        <Upload uploadFile={surat} setUploadFile={setSurat}>
+          Upload surat keterangan sekolah
+        </Upload>
+        <Upload uploadFile={bukti} setUploadFile={setBukti}>
+          Upload bukti pembayaran
+        </Upload> */}
       </form>
     </div>
   );
