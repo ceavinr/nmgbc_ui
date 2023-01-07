@@ -10,8 +10,6 @@ export default function Registration() {
   // const [bukti, setBukti] = useState("");
 
   const onSubmit = (data) => {
-    console.log(data);
-
     const formData = new FormData();
     formData.append("email", data.email);
     formData.append("nama", data.nama);
@@ -41,78 +39,77 @@ export default function Registration() {
   };
 
   return (
-    <div className="bg-[#BFEEFF] font-Volkswagen min-h-screen">
-      <h1 className="text-4xl text-center py-12">Registration</h1>
-      <form
-        className="flex flex-col pb-32 px-64 md:px-[200px] xl:px-[640px]"
-        onSubmit={handleSubmit(onSubmit)}
-      >
-        <label>E-Mail</label>
-        <input
-          className="rounded-full border-2 mb-2 px-2 py-1 border-[#B59DED]"
-          {...register("email", { required: true, maxLength: 50 })}
-        />
-        <label>Nama Lengkap</label>
-        <input
-          className="rounded-full border-2 mb-2 px-2 py-1 border-[#B59DED]"
-          {...register("nama", { required: true, maxLength: 50 })}
-        />
-        <label>Tempat, Tanggal Lahir</label>
-        <input
-          className="rounded-full border-2 mb-2 px-2 py-1 border-[#B59DED]"
-          {...register("ttl", { required: true, maxLength: 50 })}
-        />
-        <label>Jenis Kelamin</label>
-        <select
-          {...register("gender", { required: true })}
-          className="rounded-full border-2 mb-2 px-2 py-1 border-[#B59DED] cursor-pointer"
-        >
-          <option value="">Select one</option>
-          <option value="Laki-laki">Laki-laki</option>
-          <option value="Perempuan">Perempuan</option>
-        </select>
-        <label>Asal Sekolah</label>
-        <input
-          className="rounded-full border-2 mb-2 px-2 py-1 border-[#B59DED]"
-          {...register("sekolah", { required: true, maxLength: 50 })}
-        />
-        <label>Lomba yang Dipilih</label>
-        <select
-          {...register("lomba", { required: true })}
-          className="rounded-full border-2 mb-2 px-2 py-1 border-[#B59DED] cursor-pointer"
-        >
-          <option value="">Select one</option>
-          <option value="Biology competition">Biology competition</option>
-          <option value="Public poster">Public poster</option>
-          <option value="Health speech contest">Speech</option>
-        </select>
-        <label>ID Line</label>
-        <input
-          className="rounded-full border-2 mb-2 px-2 py-1 border-[#B59DED]"
-          {...register("idline", { required: true, maxLength: 20 })}
-        />
-        <label>Nomor HP</label>
-        <input
-          className="rounded-full border-2 mb-2 px-2 py-1 border-[#B59DED]"
-          {...register("notelp", {
-            required: true,
-            minLength: 10,
-            maxLength: 13,
-          })}
-        />
-        <label>Link Berkas Pendaftaran</label>
-        <input
-          className="rounded-full border-2 mb-2 px-2 py-1 border-[#B59DED]"
-          {...register("berkas", {
-            required: true,
-          })}
-        />
+    <>
+      <div className="bg-[url('../public/img/bg.png')] font-Volkswagen min-h-screen">
+        <h1 className="text-4xl lg:text-5xl text-center py-12">Registration</h1>
+        <div className="pb-32 px-64 md:px-[200px] xl:px-[640px]">
+          <form className="flex flex-col " onSubmit={handleSubmit(onSubmit)}>
+            <label>E-Mail</label>
+            <input
+              className="rounded-full border-2 mb-2 px-2 py-1 border-[#B59DED]"
+              {...register("email", { required: true, maxLength: 50 })}
+            />
+            <label>Nama Lengkap</label>
+            <input
+              className="rounded-full border-2 mb-2 px-2 py-1 border-[#B59DED]"
+              {...register("nama", { required: true, maxLength: 50 })}
+            />
+            <label>Tempat, Tanggal Lahir</label>
+            <input
+              className="rounded-full border-2 mb-2 px-2 py-1 border-[#B59DED]"
+              {...register("ttl", { required: true, maxLength: 50 })}
+            />
+            <label>Jenis Kelamin</label>
+            <select
+              {...register("gender", { required: true })}
+              className="rounded-full border-2 mb-2 px-2 py-1 border-[#B59DED] cursor-pointer"
+            >
+              <option value="">Select one</option>
+              <option value="Laki-laki">Laki-laki</option>
+              <option value="Perempuan">Perempuan</option>
+            </select>
+            <label>Asal Sekolah</label>
+            <input
+              className="rounded-full border-2 mb-2 px-2 py-1 border-[#B59DED]"
+              {...register("sekolah", { required: true, maxLength: 50 })}
+            />
+            <label>Lomba yang Dipilih</label>
+            <select
+              {...register("lomba", { required: true })}
+              className="rounded-full border-2 mb-2 px-2 py-1 border-[#B59DED] cursor-pointer"
+            >
+              <option value="">Select one</option>
+              <option value="Biology competition">Biology competition</option>
+              <option value="Public poster">Public poster</option>
+              <option value="Health speech contest">Speech</option>
+            </select>
+            <label>ID Line</label>
+            <input
+              className="rounded-full border-2 mb-2 px-2 py-1 border-[#B59DED]"
+              {...register("idline", { required: true, maxLength: 20 })}
+            />
+            <label>Nomor HP</label>
+            <input
+              className="rounded-full border-2 mb-2 px-2 py-1 border-[#B59DED]"
+              {...register("notelp", {
+                required: true,
+                minLength: 10,
+                maxLength: 13,
+              })}
+            />
+            <label>Link Berkas Pendaftaran</label>
+            <input
+              className="rounded-full border-2 mb-2 px-2 py-1 border-[#B59DED]"
+              {...register("berkas", {
+                required: true,
+              })}
+            />
 
-        <input
-          className="rounded-full border-2 mt-4 px-2 py-1 text-[#E46871] border-black cursor-pointer"
-          type="submit"
-        />
-        {/* <Upload uploadFile={kartu} setUploadFile={setKartu}>
+            <input
+              className="rounded-full border-2 mt-4 px-2 py-1 text-[#E46871] border-black cursor-pointer"
+              type="submit"
+            />
+            {/* <Upload uploadFile={kartu} setUploadFile={setKartu}>
           Upload kartu pelajar/identitas
         </Upload>
         <Upload uploadFile={surat} setUploadFile={setSurat}>
@@ -121,7 +118,9 @@ export default function Registration() {
         <Upload uploadFile={bukti} setUploadFile={setBukti}>
           Upload bukti pembayaran
         </Upload> */}
-      </form>
-    </div>
+          </form>
+        </div>
+      </div>
+    </>
   );
 }

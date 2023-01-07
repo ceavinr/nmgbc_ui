@@ -5,7 +5,7 @@ import Event2 from "../components/Event2";
 function About() {
   return (
     <>
-      <div className="min-h-screen w-screen bg-[#BFEEFF] bg-transparen lg:p-24 pb-20 pt-1 px-8 font-Volkswagen">
+      <div className="min-h-screen w-screen bg-[url('../public/img/bg.png')] bg-transparen lg:p-24 pb-20 pt-1 px-8 font-Volkswagen">
         <section className="lg:px-52 text-center my-12">
           <h1 className="my-4 text-2xl lg:text-5xl">About NMGBC 2023</h1>
           <Card>
@@ -33,7 +33,7 @@ function About() {
         </section>
         <section className="lg:px-52" id="bio">
           <h1 className="my-4 text-xl lg:text-3xl">Biology Competition</h1>
-          <Card isEvent={true}>
+          <Card isCompe={true}>
             <div className="text-xs md:text-sm lg:text-xl">
               <p>
                 Biology competition is one of the competitions organized by
@@ -71,7 +71,7 @@ function About() {
         </section>
         <section className="lg:px-52" id="poster">
           <h1 className="my-4 text-xl lg:text-3xl">Public Poster</h1>
-          <Card isEvent={true}>
+          <Card isCompe={true}>
             <div className="text-xs md:text-sm lg:text-xl">
               <p>
                 NMGBC 2023 is the fourth year that the public poster competition
@@ -100,7 +100,7 @@ function About() {
         </section>
         <section className="lg:px-52" id="speech">
           <h1 className="my-4 text-xl lg:text-3xl">Health Speech Contest</h1>
-          <Card isEvent={true}>
+          <Card isCompe={true}>
             <div className="text-xs md:text-sm lg:text-xl">
               <p>
                 Health Speech Contest was first held in NMGBC 2022, henceforth
@@ -128,7 +128,64 @@ function About() {
             </div>
           </Card>
         </section>
-        {/* <Event2 /> */}
+        <section className="lg:px-52" id="event">
+          <h1 className="my-4 text-xl lg:text-3xl">Other Events</h1>
+          <Card isCompe={false}>
+            <div className="text-xs md:text-sm lg:text-xl">
+              <ul className="space-y-3 divide-y-2 divide-[#FFCF4C] divide-dashed">
+                <li className="py-1 md:py-2">
+                  <span className="underline">Medical Seminar</span>
+                  <br /> Dilaksanakan pada NMGBC 2023 Day 1, mata acara ini akan
+                  dilaksanakan secara daring. Medical Seminar, selayaknya suatu
+                  webinar, akan membawa topik seputar pertumbuhan dan
+                  perkembangan anak dan bekerja sama dengan dokter spesialis
+                  anak. Acara ini diadakan dengan tujuan agar para peserta NMGBC
+                  2023 dapat mengikuti acara ini tidak hanya mengikuti lomba,
+                  tetapi juga dapat menambah wawasan mereka.
+                </li>
+                <li className="py-1 md:py-2">
+                  <span className="underline">Campus Tour</span> <br />
+                  Campus Tour akan dilaksanakan di NMGBC 2023 Day 2, secara
+                  luring. Para peserta akan diberikan kesempatan untuk
+                  mengelilingi Kampus Depok Universitas Indonesia dengan
+                  menggunakan bus. Peserta hanya akan turun di satu area, yaitu
+                  Gedung Rektorat sebagai simbol utama UI. Kegiatan ini
+                  bertujuan untuk mengenalkan para peserta dengan lingkungan UI
+                  dan juga dapat mempromosikan UI itu sendiri.
+                </li>
+                <li className="py-1 md:py-2">
+                  <span className="underline">Meet Your Doctor</span> <br />
+                  Rangkaian acara ini akan dilaksanakan pada NMGBC 2023 Day 3,
+                  secara luring. Peserta akan kami ajak untuk berpartisipasi
+                  dalam empat situasi yang dapat dirasakan seorang dokter dalam
+                  kesehariannya. Peserta akan berperan seolah-olah menjadi
+                  seorang dokter yang harus menyelesaikan masalah dengan pihak
+                  lain yang akan diperagakan oleh panitia dari NGBC 2023.
+                </li>
+                <li className="py-1 md:py-2">
+                  <span className="underline">Workshop</span> <br />
+                  Dilaksanakan juga secara luring, mata acara ini berada pada
+                  NMGBC 2023 Day 3. Workshop akan memberikan pelatihan kepada
+                  para peserta NMGBC 2023 mengenai pertumbuhan dan perkembangan
+                  anak, khususnya mengenai cara skrining pertumbuhan dan
+                  perkembangan anak-anak. Dalam pelatihannya, kami akan
+                  menyediakan beberapa kasus yang harus peserta tentukan kondisi
+                  gizi anak-anak dalam kasus tersebut.
+                </li>
+                <li className="py-1 md:py-2">
+                  <span className="underline">Talkshow</span> <br />
+                  Dilaksanakan juga secara luring, mata acara ini berada pada
+                  NMGBC 2023 Day 3. Workshop akan memberikan pelatihan kepada
+                  para peserta NMGBC 2023 mengenai pertumbuhan dan perkembangan
+                  anak, khususnya mengenai cara skrining pertumbuhan dan
+                  perkembangan anak-anak. Dalam pelatihannya, kami akan
+                  menyediakan beberapa kasus yang harus peserta tentukan kondisi
+                  gizi anak-anak dalam kasus tersebut.
+                </li>
+              </ul>
+            </div>
+          </Card>
+        </section>
       </div>
     </>
   );
