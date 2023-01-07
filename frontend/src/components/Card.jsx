@@ -2,7 +2,8 @@ import React from "react";
 
 const Card = (props) => {
   return (
-    <div className="flex-[1] bg-[#FFF3BF] backdrop-blur-xl rounded-3xl shadow-sm">
+    // #FFF3BF
+    <div className="flex-[1] bg-[#d0ecfc] backdrop-blur-xl rounded-3xl shadow-sm mx-24">
       <div className="sm:flex flex-1 items-center justify-between md:w-full mx-auto h-full flex-col">
         <div className="space-y-4 lg:text-2xl px-5 py-5 justify-center relative z-10 ">
           {props.children}

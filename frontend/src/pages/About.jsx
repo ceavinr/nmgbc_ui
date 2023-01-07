@@ -1,11 +1,12 @@
 import React from "react";
 import Card from "../components/Card";
 import Event2 from "../components/Event2";
+import Rgb from "../components/Rgb";
 
 function About() {
   return (
     <>
-      <div className="min-h-screen w-screen bg-[url('../public/img/bg.png')] bg-transparen lg:p-24 pb-20 pt-1 px-8 font-Volkswagen">
+      <div className="min-h-screen w-screen bg-[url('../public/img/bg.png')] bg-transparen pb-20 pt-1 font-Volkswagen">
         <section className="lg:px-52 text-center my-12">
           <h1 className="my-4 text-2xl lg:text-5xl">About NMGBC 2023</h1>
           <Card>
@@ -31,10 +32,13 @@ function About() {
             </p>
           </Card>
         </section>
-        <section className="lg:px-52" id="bio">
-          <h1 className="my-4 text-xl lg:text-3xl">Biology Competition</h1>
+        <section className="" id="bio">
+          <div className="flex left-0 p-4 bg-white h-32 w-1/2 mb-14">
+            <div className="inline-block rounded-full text-white bg-[#c9c6bc] ml-4 mr-8 px-6 py-4 my-4 text-3xl">1</div>
+            <Rgb title="Biology" subtitle="competition"></Rgb>
+          </div>
           <Card isCompe={true}>
-            <div className="text-xs md:text-sm lg:text-xl">
+            <div className="text-xs md:text-sm lg:text-xl text-[#2b3990] tracking-wider">
               <p>
                 Biology competition is one of the competitions organized by
                 NMGBC which includes four stages where each stage will filter
