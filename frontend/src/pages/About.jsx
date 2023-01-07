@@ -36,32 +36,34 @@ function About() {
           <Card isEvent={true}>
             <div className="text-xs md:text-sm lg:text-xl">
               <p>
-                Biology competition adalah salah satu lomba yang diselenggarakan
-                oleh NMGBC yang mana meliputi empat tahap dimana masing-masing
-                tahap akan ada penyaringan jumlah peserta, tentu topik dari
-                perlombaan ini adalah biologi.
+                Biology competition is one of the competitions organized by
+                NMGBC which includes four stages where each stage will filter
+                the number of participants, with the topic of this competition
+                will be the same as NMGBC's theme.
               </p>
               <br />
               <ul className="space-y-3">
                 <li>
                   <span className="underline">Preliminary round</span>
-                  <br /> Multiple Choice Question: 1 team akan mengerjakan
-                  secara bergantian
+                  <br /> Each team will work on Multiple Choice Question (MCQ)
+                  simultaneously
                 </li>
                 <li>
-                  <span className="underline">Semi final</span> <br />
-                  Teng-teng Quiz: Setiap peserta akan mengerjakan sesuai pos
-                  yang mana 1 pos memiliki waktu pengerjaan selama 1 menit
+                  <span className="underline">Semifinal round</span> <br />
+                  Each team will answer some questions according to the post
+                  where the post has limited amount of time and all of the post
+                  will be taken on based on the rotation
                 </li>
                 <li>
-                  <span className="underline">Final</span> <br />
-                  Reli Quiz: Tim akan berkeliling di lingkungan Rumpun Ilmu
-                  Kesehatan untuk menuju pos yang mana tiap pos terdapat soal
-                  dengan bobot nilai berbeda
+                  <span className="underline">Final round</span> <br />
+                  The team will travel around designated place to go to the post
+                  where each post has questions with different value and cost to
+                  answer
                 </li>
                 <li>
                   <span className="underline">Grand final</span> <br />
-                  Cerdas cermat dan presentasi kasus dengan tema Tumbuh Kembang
+                  Quiz and Student Oral Case Analysis (SOCA) based on NMGBC 2023
+                  theme
                 </li>
               </ul>
             </div>
@@ -85,11 +87,11 @@ function About() {
                   <br /> Online Poster scoring and voting
                 </li>
                 <li>
-                  <span className="underline">Semi final</span> <br />
+                  <span className="underline">Semifinal round</span> <br />
                   Poster presentation
                 </li>
                 <li>
-                  <span className="underline">Final</span> <br />
+                  <span className="underline">Final round</span> <br />
                   Offline campaign presentation
                 </li>
               </ul>
@@ -115,11 +117,11 @@ function About() {
                   <br /> Essay and video submission
                 </li>
                 <li>
-                  <span className="underline">Semi final</span> <br />
+                  <span className="underline">Semifinal round</span> <br />
                   Offline impromptu speech
                 </li>
                 <li>
-                  <span className="underline">Final</span> <br />
+                  <span className="underline">Final round</span> <br />
                   Offline speech and QnA session
                 </li>
               </ul>
