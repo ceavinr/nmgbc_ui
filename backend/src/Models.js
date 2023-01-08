@@ -10,10 +10,10 @@ const pesertaSchema = new Schema({
   lomba: String,
   idline: String,
   notelp: String,
-  berkas: String,
-  // kartu_identitas: String,
-  // surat_keterangan: String,
-  // bukti_pembayaran: String,
+  kartu: String,
+  surat: String,
+  foto: String,
+  bukti: String,
   is_verified: Boolean,
 });
 const peserta = mongoose.model("peserta", pesertaSchema);
