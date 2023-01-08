@@ -7,6 +7,11 @@
   src: url('../public/font/volkswagen-serial-extrabold-regular.ttf');
 }
 
+@font-face {
+  font-family: 'Stanberry';
+  src: url('../public/font/stanberry.ttf');
+}
+
 body {
   margin: 0;
   /* font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', 'Roboto', 'Oxygen',

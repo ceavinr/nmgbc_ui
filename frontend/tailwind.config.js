@@ -5,6 +5,7 @@ module.exports = {
     extend: {
       fontFamily: {
         Volkswagen: "Volkswagen",
+        Stanberry: "Stanberry",
       },
     },
   },
