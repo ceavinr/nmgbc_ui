@@ -1,12 +1,13 @@
 import React from "react";
-import { useNavigate } from "react-router-dom";
+import { useNavigate, useLocation } from "react-router-dom";
 
 function Navbar() {
+  const location = useLocation();
   const navigate = useNavigate();
 
   return (
-    <div className="font-Volkswagen text-white w-screen flex justify-between h-12 md:h-20 items-center bg-[#BFEEFF]">
-      <img className="absolute w-max" src="/img/cloud-navbar.png" alt=""></img>
+    <div className={`font-Volkswagen text-white w-screen flex justify-between h-12 md:h-20 items-center ${location.pathname === "/" ? "bg-[#BFEEFF]" : "bg-[#b7dbf8]" }`}>
+      <img className="absolute w-screen h-20 md:h-32 lg:h-40" src="/img/cloud-navbar.png" alt=""></img>
       <div
         className="relative md:ml-8 ml-4 w-[40px] md:w-[60px] cursor-pointer"
         onClick={() => navigate("/")}
