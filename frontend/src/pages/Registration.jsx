@@ -11,21 +11,21 @@ export default function Registration() {
 
   const onSubmit = (data) => {
     const formData = new FormData();
-    // formData.append("email", data.email);
-    // formData.append("nama", data.nama);
-    // formData.append("ttl", data.ttl);
-    // formData.append("gender", data.gender);
-    // formData.append("sekolah", data.sekolah);
-    // formData.append("lomba", data.lomba);
-    // formData.append("idline", data.idline);
-    // formData.append("notelp", data.notelp);
-    // formData.append("kartu", data.kartu);
-    // formData.append("surat", data.surat);
-    // formData.append("foto", data.foto);
-    // formData.append("bukti", data.bukti);
+    formData.append("email", data.email);
+    formData.append("nama", data.nama);
+    formData.append("ttl", data.ttl);
+    formData.append("gender", data.gender);
+    formData.append("sekolah", data.sekolah);
+    formData.append("lomba", data.lomba);
+    formData.append("idline", data.idline);
+    formData.append("notelp", data.notelp);
+    formData.append("kartu", data.kartu);
+    formData.append("surat", data.surat);
+    formData.append("foto", data.foto);
+    formData.append("bukti", data.bukti);
 
     axios
-      .post("http://nmgbc-backend.vercel.app/api/register", data, {
+      .post("http://nmgbc-backend.vercel.app/api/register/", formData, {
         headers: {
           "content-type": "multipart/form-data",
         },
