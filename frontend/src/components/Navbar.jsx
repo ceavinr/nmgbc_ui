@@ -17,10 +17,11 @@ function Navbar() {
         alt=""
       ></img>
       <div
-        className="relative md:ml-8 ml-4 w-[40px] md:w-[60px] cursor-pointer"
+        className="relative md:ml-8 ml-4 w-[40px] md:w-[60px] cursor-pointer flex gap-2 lg:gap-4"
         onClick={() => navigate("/")}
       >
         <img src="/img/logo.png" alt="" />
+        <img src="/img/amsa_ui.png" alt="" />
       </div>
       <div className="relative flex md:mr-14 mr-4 gap-6 text-xs md:text-xl lg:text-2xl font-Stanberry">
         <a href="/">Home</a>

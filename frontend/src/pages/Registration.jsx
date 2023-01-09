@@ -43,28 +43,33 @@ export default function Registration() {
   return (
     <>
       <div className="bg-[url('../public/img/bg.png')] font-Volkswagen min-h-screen">
-        <h1 className="text-4xl lg:text-5xl text-center py-12">Registration</h1>
+        <h1 className="text-2xl md:text-4xl lg:text-5xl text-center py-12">
+          Registration
+        </h1>
         <div className="pb-32 px-20 md:px-[200px] xl:px-[640px]">
-          <form className="flex flex-col " onSubmit={handleSubmit(onSubmit)}>
+          <form
+            className="flex flex-col text-sm md:text-base"
+            onSubmit={handleSubmit(onSubmit)}
+          >
             <label>E-Mail</label>
             <input
-              className="rounded-full border-2 mb-2 px-2 py-1 border-[#B59DED]"
+              className="rounded-full border-2 mb-2 md:px-2 md:py-1 border-[#B59DED]"
               {...register("email", { required: true, maxLength: 50 })}
             />
             <label>Nama Lengkap</label>
             <input
-              className="rounded-full border-2 mb-2 px-2 py-1 border-[#B59DED]"
+              className="rounded-full border-2 mb-2 md:px-2 md:py-1 border-[#B59DED]"
               {...register("nama", { required: true, maxLength: 50 })}
             />
             <label>Tempat, Tanggal Lahir</label>
             <input
-              className="rounded-full border-2 mb-2 px-2 py-1 border-[#B59DED]"
+              className="rounded-full border-2 mb-2 md:px-2 md:py-1 border-[#B59DED]"
               {...register("ttl", { required: true, maxLength: 50 })}
             />
             <label>Jenis Kelamin</label>
             <select
               {...register("gender", { required: true })}
-              className="rounded-full border-2 mb-2 px-2 py-1 border-[#B59DED] cursor-pointer"
+              className="rounded-full border-2 mb-2 md:px-2 md:py-1 border-[#B59DED] cursor-pointer"
             >
               <option value="">Select one</option>
               <option value="Laki-laki">Laki-laki</option>
@@ -72,13 +77,13 @@ export default function Registration() {
             </select>
             <label>Asal Sekolah</label>
             <input
-              className="rounded-full border-2 mb-2 px-2 py-1 border-[#B59DED]"
+              className="rounded-full border-2 mb-2 md:px-2 md:py-1 border-[#B59DED]"
               {...register("sekolah", { required: true, maxLength: 50 })}
             />
             <label>Lomba yang Dipilih</label>
             <select
               {...register("lomba", { required: true })}
-              className="rounded-full border-2 mb-2 px-2 py-1 border-[#B59DED] cursor-pointer"
+              className="rounded-full border-2 mb-2 md:px-2 md:py-1 border-[#B59DED] cursor-pointer"
             >
               <option value="">Select one</option>
               <option value="Biology competition">Biology competition</option>
@@ -87,12 +92,12 @@ export default function Registration() {
             </select>
             <label>ID Line</label>
             <input
-              className="rounded-full border-2 mb-2 px-2 py-1 border-[#B59DED]"
+              className="rounded-full border-2 mb-2 md:px-2 md:py-1 border-[#B59DED]"
               {...register("idline", { required: true, maxLength: 20 })}
             />
             <label>Nomor HP</label>
             <input
-              className="rounded-full border-2 mb-2 px-2 py-1 border-[#B59DED]"
+              className="rounded-full border-2 mb-2 md:px-2 md:py-1 border-[#B59DED]"
               {...register("notelp", {
                 required: true,
                 minLength: 10,
@@ -101,21 +106,21 @@ export default function Registration() {
             />
             <label>Link Kartu Identitas</label>
             <input
-              className="rounded-full border-2 mb-2 px-2 py-1 border-[#B59DED]"
+              className="rounded-full border-2 mb-2 md:px-2 md:py-1 border-[#B59DED]"
               {...register("kartu", {
                 required: true,
               })}
             />
             <label>Link Surat Keterangan</label>
             <input
-              className="rounded-full border-2 mb-2 px-2 py-1 border-[#B59DED]"
+              className="rounded-full border-2 mb-2 md:px-2 md:py-1 border-[#B59DED]"
               {...register("surat", {
                 required: true,
               })}
             />
             <label>Link Pas Foto</label>
             <input
-              className="rounded-full border-2 mb-2 px-2 py-1 border-[#B59DED]"
+              className="rounded-full border-2 mb-2 md:px-2 md:py-1 border-[#B59DED]"
               {...register("foto", {
                 required: true,
               })}
@@ -125,14 +130,14 @@ export default function Registration() {
               GITA MARCIA KARINA <br /> Bank Mandiri <br /> 1020009940153
             </p> */}
             <input
-              className="rounded-full border-2 mb-2 px-2 py-1 border-[#B59DED]"
+              className="rounded-full border-2 mb-2 md:px-2 md:py-1 border-[#B59DED]"
               {...register("bukti", {
                 required: true,
               })}
             />
 
             <input
-              className="rounded-full border-2 mt-4 px-2 py-1 text-[#E46871] border-black cursor-pointer"
+              className="rounded-full border-2 mt-4 md:px-2 md:py-1 text-[#E46871] border-black cursor-pointer"
               type="submit"
             />
             {/* <Upload uploadFile={kartu} setUploadFile={setKartu}>
