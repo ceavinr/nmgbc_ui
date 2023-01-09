@@ -13,7 +13,7 @@ function Event(props) {
             <HashLink
               smooth
               to={props.link}
-              className="underline text-sm md:text-base xl:text-xl md:text-right"
+              className="underline text-sm md:text-base xl:text-xl md:text-right font-Stanberry"
             >
               <div className="text-right">learn more</div>
             </HashLink>

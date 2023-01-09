@@ -7,7 +7,7 @@ function Hero() {
       <div className="flex flex-col-reverse lg:flex-row items-center w-full justify-center font-Volkswagen">
         <div className="flex flex-col items-center gap-4">
           <img src="/img/hero.png" alt="" />
-          <div className="mb-6 lg:mb-0 flex gap-2 lg:gap-12 text-sm md:text-xl lg:text-2xl text-[#E46871]">
+          <div className="mb-6 lg:mb-0 flex gap-2 lg:gap-12 text-sm md:text-xl lg:text-2xl text-[#E46871] font-Stanberry">
             <a
               href="/registration"
               className="border-2 rounded-full border-black p-1 md:px-4 md:py-2"
