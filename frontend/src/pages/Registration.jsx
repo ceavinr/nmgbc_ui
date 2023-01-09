@@ -1,7 +1,6 @@
-import React, { useState } from "react";
+import React from "react";
 import axios from "axios";
 import { useForm } from "react-hook-form";
-import Upload from "../components/Upload";
 import { useNavigate } from "react-router-dom";
 
 export default function Registration() {
