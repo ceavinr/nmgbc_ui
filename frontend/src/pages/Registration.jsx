@@ -2,8 +2,10 @@ import React, { useState } from "react";
 import axios from "axios";
 import { useForm } from "react-hook-form";
 import Upload from "../components/Upload";
+import { useNavigate } from "react-router-dom";
 
 export default function Registration() {
+  const navigate = useNavigate();
   const { register, handleSubmit } = useForm();
   // const [kartu, setKartu] = useState("");
   // const [surat, setSurat] = useState("");
@@ -25,13 +27,14 @@ export default function Registration() {
     formData.append("bukti", data.bukti);
 
     axios
-      .post("http://nmgbc-backend.vercel.app/api/register/", formData, {
+      .post("https://nmgbc-backend.vercel.app/api/register/", formData, {
         headers: {
           "content-type": "multipart/form-data",
         },
       })
       .then((response) => {
-        console.log(response.data);
+        alert("Registrasi Berhasil!");
+        navigate("/");
       })
       .catch((error) => {
         console.log(error);
