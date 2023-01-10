@@ -198,7 +198,7 @@ function About() {
             </ul>
           </Card>
         </section>
-        <section className="my-7 max-w-[2000px]" id="event">
+        <section className="my-7 max-w-[2000px] mt-20" id="event">
           <Card isCompe={false}>
             <div className="text-center">
               <Title title="Other Events"></Title>
@@ -206,7 +206,7 @@ function About() {
             <div className="text-xs md:text-sm lg:text-xl font-Stanberry">
               <ul className="space-y-3 divide-y-2 divide-[#FFCF4C] divide-dashed">
                 <li className="py-1 md:py-2">
-                  <span className="underline text-lg md:text-xl lg:text-2xl">
+                  <span className="underline text-lg md:text-xl lg:text-2xl font-Volkswagen">
                     Medical Seminar
                   </span>
                   <br /> Dilaksanakan pada NMGBC 2023 Day 1, mata acara ini akan
@@ -218,7 +218,7 @@ function About() {
                   tetapi juga dapat menambah wawasan mereka.
                 </li>
                 <li className="py-1 md:py-2">
-                  <span className="underline text-lg md:text-xl lg:text-2xl">
+                  <span className="underline text-lg md:text-xl lg:text-2xl font-Volkswagen">
                     Campus Tour
                   </span>{" "}
                   <br />
@@ -231,7 +231,7 @@ function About() {
                   dan juga dapat mempromosikan UI itu sendiri.
                 </li>
                 <li className="py-1 md:py-2">
-                  <span className="underline text-lg md:text-xl lg:text-2xl">
+                  <span className="underline text-lg md:text-xl lg:text-2xl font-Volkswagen">
                     Meet Your Doctor
                   </span>{" "}
                   <br />
@@ -243,7 +243,7 @@ function About() {
                   lain yang akan diperagakan oleh panitia dari NGBC 2023.
                 </li>
                 <li className="py-1 md:py-2">
-                  <span className="underline text-lg md:text-xl lg:text-2xl">
+                  <span className="underline text-lg md:text-xl lg:text-2xl font-Volkswagen">
                     Workshop
                   </span>{" "}
                   <br />
@@ -256,7 +256,7 @@ function About() {
                   gizi anak-anak dalam kasus tersebut.
                 </li>
                 <li className="py-1 md:py-2">
-                  <span className="underline text-lg md:text-xl lg:text-2xl">
+                  <span className="underline text-lg md:text-xl lg:text-2xl font-Volkswagen">
                     Talkshow
                   </span>{" "}
                   <br />

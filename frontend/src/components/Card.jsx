@@ -3,7 +3,11 @@ import React from "react";
 const Card = (props) => {
   return (
     // #FFF3BF
-    <div className="flex-[1] bg-[#dff4fa] drop-shadow-lg rounded-3xl mx-6 lg:mx-24 align-center justify-center">
+    <div
+      className={`flex-[1] bg-[#dff4fa] drop-shadow-lg rounded-3xl ${
+        props.isCompe && "mx-6 lg:mx-24"
+      } align-center justify-center`}
+    >
       <div className="sm:flex flex-1 items-center justify-between md:w-full mx-auto h-full flex-col">
         <div className="space-y-4 lg:text-2xl px-5 py-5 justify-center relative z-10 ">
           {props.children}
