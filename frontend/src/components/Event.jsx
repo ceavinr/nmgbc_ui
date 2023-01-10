@@ -4,8 +4,8 @@ import { HashLink } from "react-router-hash-link";
 function Event(props) {
   return (
     <div className={props.className}>
-      <div className="bg-[#FFF3BF] px-6 py-1 md:py-2">
-        <div className="flex justify-end items-center gap-2">
+      <div className=" px-6 py-1 md:py-2 flex justify-center">
+        <div className="flex justify-end items-center gap-2 max-w-[2000px] w-full">
           <div className="font-Volkswagen space-y-2">
             <h1 className="pr-[40px] md:pr-[55px] text-right md:text-xl xl:text-2xl">
               {props.children}

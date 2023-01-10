@@ -32,7 +32,7 @@ function Hero() {
         </div>
       </div>
 
-      <div className="divide-y-2 divide-[#FFCF4C] divide-dashed">
+      <div className="divide-y-2 divide-[#FFCF4C] divide-dashed bg-[#FFF3BF]">
         <Event className="text-[#26C8FF]" link="about/#bio" odd={true}>
           <span>Biology Competition</span>
         </Event>

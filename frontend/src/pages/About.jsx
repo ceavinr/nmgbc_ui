@@ -1,14 +1,13 @@
 import React from "react";
 import Card from "../components/Card";
-import Event2 from "../components/Event2";
 import Title from "../components/Title";
 import Text from "../components/Text";
 
 function About() {
   return (
     <>
-      <div className="min-h-screen w-screen bg-[url('../public/img/bg.png')] bg-transparen pb-1 md:pb-2 pt-1 font-Volkswagen">
-        <section className="lg:px-52 text-center mt-6 lg:mt-24 mb-12">
+      <div className="min-h-screen w-screen bg-[url('../public/img/bg.png')] pb-1 md:pb-2 pt-1 font-Volkswagen flex flex-col items-center">
+        <section className="lg:px-52 text-center mt-6 lg:mt-24 mb-12 max-w-[2000px]">
           <Card>
             <div className="mb-4 lg:mb-8">
               <Title title="About NMGBC 2023"></Title>
@@ -35,7 +34,7 @@ function About() {
             </p>
           </Card>
         </section>
-        <section className="my-7" id="bio">
+        <section className="my-7 max-w-[2000px]" id="bio">
           <div className="flex left-0 p-4 bg-white h-26 lg:h-40 w-screen lg:w-3/4 2xl:w-1/2 my-7">
             <div className="inline-block rounded-full text-white bg-[#c9c6bc] ml-2 lg:ml-4 mr-4 lg:mr-8 px-4 lg:px-6 py-2 lg:py-4 my-5 lg:my-8 text-xl md:text-2xl lg:text-3xl">
               1
@@ -104,7 +103,7 @@ function About() {
             </ul>
           </Card>
         </section>
-        <section className="my-7" id="poster">
+        <section className="my-7 max-w-[2000px]" id="poster">
           <div className="flex left-0 p-4 bg-white h-28 lg:h-40 w-screen lg:w-3/4 2xl:w-1/2 my-7">
             <div className="inline-block rounded-full text-white bg-[#c9c6bc] ml-2 lg:ml-4 mr-4 lg:mr-8 px-3 lg:px-6 py-2 lg:py-4 my-5 lg:my-8 text-xl md:text-2xl lg:text-3xl">
               2
@@ -151,7 +150,7 @@ function About() {
             </ul>
           </Card>
         </section>
-        <section className="my-7" id="speech">
+        <section className="my-7 max-w-[2000px]" id="speech">
           <div className="flex left-0 p-4 bg-white h-28 lg:h-40 w-screen lg:w-3/4 2xl:w-1/2 my-7">
             <div className="inline-block rounded-full text-white bg-[#c9c6bc] ml-2 lg:ml-4 mr-4 lg:mr-8 px-3 lg:px-6 py-2 lg:py-4 my-5 lg:my-8 text-xl md:text-2xl lg:text-3xl">
               3
@@ -199,7 +198,7 @@ function About() {
             </ul>
           </Card>
         </section>
-        <section className="lg:px-52 my-7" id="event">
+        <section className="my-7 max-w-[2000px]" id="event">
           <Card isCompe={false}>
             <div className="text-center">
               <Title title="Other Events"></Title>

@@ -46,9 +46,9 @@ export default function Registration() {
         <h1 className="text-2xl md:text-4xl lg:text-5xl text-center py-12">
           Registration
         </h1>
-        <div className="pb-32 px-20 md:px-[200px] xl:px-[640px]">
+        <div className="flex justify-center pb-32 px-20 md:px-[200px]">
           <form
-            className="flex flex-col text-sm md:text-base"
+            className="flex flex-col text-sm md:text-base max-w-[600px] w-full"
             onSubmit={handleSubmit(onSubmit)}
           >
             <label>E-Mail</label>
