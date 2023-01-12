@@ -35,7 +35,9 @@ function Navbar() {
           <a href="/">Home</a>
           <a href="/about">About</a>
           <a href="/registration">Registration</a>
-          <a href="/booklet">Booklet</a>
+          <a href="https://bit.ly/GuidelineNMGBC2023" target={"blank"}>
+            Booklet
+          </a>
         </div>
       </div>
     </div>

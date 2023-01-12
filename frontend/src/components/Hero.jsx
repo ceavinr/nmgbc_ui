@@ -15,7 +15,8 @@ function Hero() {
               Registration
             </a>
             <a
-              href="/video"
+              href="https://drive.google.com/file/d/1i8ML4T1Ov0IyqjdpKAP_TDL1qtYKs50c/view?usp=sharing"
+              target={"blank"}
               className="border-2 rounded-full border-black py-1 px-6 md:px-8 md:py-2"
             >
               Video
