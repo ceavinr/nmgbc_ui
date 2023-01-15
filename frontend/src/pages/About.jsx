@@ -198,7 +198,7 @@ function About() {
             </ul>
           </Card>
         </section>
-        <section className="my-7 max-w-[2000px] mt-20" id="event">
+        <section className="my-7 max-w-[2000px] mt-20 mx-48" id="event">
           <Card isCompe={false}>
             <div className="text-center">
               <Title title="Other Events"></Title>

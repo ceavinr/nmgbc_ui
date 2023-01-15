@@ -37,13 +37,13 @@ function Hero() {
         <Event className="text-[#26C8FF]" link="about/#bio" odd={true}>
           <span>Biology Competition</span>
         </Event>
-        <Event className="text-[#0BC8A4]" link="about/#bio">
+        <Event className="text-[#0BC8A4]" link="about/#poster">
           <span>Public Poster</span>
         </Event>
         <Event className="text-[#F98CD5]" link="about/#speech" odd={true}>
           <span>Speech</span>
         </Event>
-        <Event className="text-[#E46862]" link="">
+        <Event className="text-[#E46862]" link="about/#event">
           Event
         </Event>
       </div>
