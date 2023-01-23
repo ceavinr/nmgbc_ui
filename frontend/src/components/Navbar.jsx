@@ -35,7 +35,10 @@ function Navbar() {
           <a href="/">Home</a>
           <a href="/about">About</a>
           <a href="/registration">Registration</a>
-          <a href="https://bit.ly/GuidelineNMGBC2023" target={"blank"}>
+          <a
+            href="https://drive.google.com/file/d/1VVZFyw9p4EB6oovtqyfMXXz_r1ZHZ-Ta/view?usp=drivesdk"
+            target={"blank"}
+          >
             Booklet
           </a>
         </div>
