@@ -36,7 +36,7 @@ function Navbar() {
           <a href="/about">About</a>
           <a href="/registration">Registration</a>
           <a
-            href="https://drive.google.com/file/d/1VVZFyw9p4EB6oovtqyfMXXz_r1ZHZ-Ta/view?usp=drivesdk"
+            href="https://drive.google.com/file/d/1ex_5L6OR3wT2g0MdzbsNWDzGT4QimK8A/view?usp=share_link"
             target={"blank"}
           >
             Booklet
