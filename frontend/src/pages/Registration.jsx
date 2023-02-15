@@ -32,7 +32,9 @@ export default function Registration() {
         },
       })
       .then((response) => {
-        alert("Registrasi Berhasil!");
+        alert(
+          "Registrasi Berhasil! Peserta akan diinvite ke dalam grup WA oleh panitia setelah dilakukan konfirmasi melalui WA"
+        );
         navigate("/");
       })
       .catch((error) => {
