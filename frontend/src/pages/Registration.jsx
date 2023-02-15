@@ -32,9 +32,7 @@ export default function Registration() {
         },
       })
       .then((response) => {
-        alert(
-          "Registrasi Berhasil! Peserta akan diinvite ke dalam grup WA oleh panitia setelah dilakukan konfirmasi melalui WA"
-        );
+        alert("Registrasi Berhasil!");
         navigate("/");
       })
       .catch((error) => {
@@ -137,7 +135,6 @@ export default function Registration() {
                 required: true,
               })}
             />
-
             <input
               className="rounded-full border-2 mt-4 md:px-2 md:py-1 text-[#E46871] border-black cursor-pointer"
               type="submit"
@@ -151,6 +148,10 @@ export default function Registration() {
         <Upload uploadFile={bukti} setUploadFile={setBukti}>
           Upload bukti pembayaran
         </Upload> */}
+            <p className="mt-2">
+              Peserta akan diinvite ke dalam grup WA oleh panitia setelah
+              dilakukan konfirmasi melalui WA
+            </p>
           </form>
         </div>
       </div>
