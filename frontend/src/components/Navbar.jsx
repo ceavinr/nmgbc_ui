@@ -35,12 +35,7 @@ function Navbar() {
           <a href="/">Home</a>
           <a href="/about">About</a>
           <a href="/registration">Registration</a>
-          <a
-            href="https://drive.google.com/file/d/1ex_5L6OR3wT2g0MdzbsNWDzGT4QimK8A/view?usp=share_link"
-            target={"blank"}
-          >
-            Booklet
-          </a>
+          <a href="/booklet">Booklet</a>
         </div>
       </div>
     </div>
