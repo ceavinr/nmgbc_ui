@@ -6,12 +6,15 @@ import { AiOutlineLoading } from "react-icons/ai";
 
 export default function Registration() {
   const navigate = useNavigate();
-  const { register, handleSubmit } = useForm();
+  const {
+    register,
+    handleSubmit,
+    formState: { errors },
+  } = useForm();
   const [loading, setLoading] = useState(false);
   // const [kartu, setKartu] = useState("");
   // const [surat, setSurat] = useState("");
   // const [bukti, setBukti] = useState("");
-
   const onSubmit = (data) => {
     setLoading(true);
     const formData = new FormData();
@@ -62,18 +65,34 @@ export default function Registration() {
           >
             <label>E-Mail</label>
             <input
-              className="rounded-full border-2 mb-2 md:px-2 md:py-1 border-[#B59DED]"
+              className={`rounded-full border-2 mb-2 md:px-2 md:py-1 border-[#B59DED] ${
+                errors.email && "border-[#ee1f1f]"
+              }`}
               {...register("email", { required: true, maxLength: 50 })}
             />
-            <label>Nama Lengkap</label>
+            <label>Nama Lengkap</label>{" "}
+            {errors.nama?.type === "maxLength" && (
+              <span className="text-[#ee1f1f] font-Stanberry">
+                Maksimal karakter adalah 200
+              </span>
+            )}
             <input
-              className="rounded-full border-2 mb-2 md:px-2 md:py-1 border-[#B59DED]"
-              {...register("nama", { required: true, maxLength: 50 })}
+              className={`rounded-full border-2 mb-2 md:px-2 md:py-1 border-[#B59DED] ${
+                errors.nama && "border-[#ee1f1f]"
+              }`}
+              {...register("nama", { required: true, maxLength: 200 })}
             />
             <label>Tempat, Tanggal Lahir</label>
+            {errors.ttl?.type === "maxLength" && (
+              <span className="text-[#ee1f1f] font-Stanberry">
+                Maksimal karakter adalah 100
+              </span>
+            )}
             <input
-              className="rounded-full border-2 mb-2 md:px-2 md:py-1 border-[#B59DED]"
-              {...register("ttl", { required: true, maxLength: 50 })}
+              className={`rounded-full border-2 mb-2 md:px-2 md:py-1 border-[#B59DED] ${
+                errors.ttl && "border-[#ee1f1f]"
+              }`}
+              {...register("ttl", { required: true, maxLength: 100 })}
             />
             <label>Jenis Kelamin</label>
             <select
@@ -86,7 +105,9 @@ export default function Registration() {
             </select>
             <label>Asal Sekolah</label>
             <input
-              className="rounded-full border-2 mb-2 md:px-2 md:py-1 border-[#B59DED]"
+              className={`rounded-full border-2 mb-2 md:px-2 md:py-1 border-[#B59DED] ${
+                errors.sekolah && "border-[#ee1f1f]"
+              }`}
               {...register("sekolah", { required: true, maxLength: 50 })}
             />
             <label>Lomba yang Dipilih</label>
@@ -101,12 +122,16 @@ export default function Registration() {
             </select>
             <label>ID Line</label>
             <input
-              className="rounded-full border-2 mb-2 md:px-2 md:py-1 border-[#B59DED]"
+              className={`rounded-full border-2 mb-2 md:px-2 md:py-1 border-[#B59DED] ${
+                errors.idline && "border-[#ee1f1f]"
+              }`}
               {...register("idline", { required: true, maxLength: 20 })}
             />
             <label>Nomor HP</label>
             <input
-              className="rounded-full border-2 mb-2 md:px-2 md:py-1 border-[#B59DED]"
+              className={`rounded-full border-2 mb-2 md:px-2 md:py-1 border-[#B59DED] ${
+                errors.notelp && "border-[#ee1f1f]"
+              }`}
               {...register("notelp", {
                 required: true,
                 minLength: 10,
@@ -115,21 +140,27 @@ export default function Registration() {
             />
             <label>Link Kartu Identitas</label>
             <input
-              className="rounded-full border-2 mb-2 md:px-2 md:py-1 border-[#B59DED]"
+              className={`rounded-full border-2 mb-2 md:px-2 md:py-1 border-[#B59DED] ${
+                errors.kartu && "border-[#ee1f1f]"
+              }`}
               {...register("kartu", {
                 required: true,
               })}
             />
             <label>Link Surat Keterangan</label>
             <input
-              className="rounded-full border-2 mb-2 md:px-2 md:py-1 border-[#B59DED]"
+              className={`rounded-full border-2 mb-2 md:px-2 md:py-1 border-[#B59DED] ${
+                errors.surat && "border-[#ee1f1f]"
+              }`}
               {...register("surat", {
                 required: true,
               })}
             />
             <label>Link Pas Foto</label>
             <input
-              className="rounded-full border-2 mb-2 md:px-2 md:py-1 border-[#B59DED]"
+              className={`rounded-full border-2 mb-2 md:px-2 md:py-1 border-[#B59DED] ${
+                errors.foto && "border-[#ee1f1f]"
+              }`}
               {...register("foto", {
                 required: true,
               })}
@@ -139,7 +170,9 @@ export default function Registration() {
               GITA MARCIA KARINA <br /> Bank Mandiri <br /> 1020009940153
             </p> */}
             <input
-              className="rounded-full border-2 mb-2 md:px-2 md:py-1 border-[#B59DED]"
+              className={`rounded-full border-2 mb-2 md:px-2 md:py-1 border-[#B59DED] ${
+                errors.bukti && "border-[#ee1f1f]"
+              }`}
               {...register("bukti", {
                 required: true,
               })}
