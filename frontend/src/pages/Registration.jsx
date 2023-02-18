@@ -1,16 +1,19 @@
-import React from "react";
+import React, { useState } from "react";
 import axios from "axios";
 import { useForm } from "react-hook-form";
 import { useNavigate } from "react-router-dom";
+import { AiOutlineLoading } from "react-icons/ai";
 
 export default function Registration() {
   const navigate = useNavigate();
   const { register, handleSubmit } = useForm();
+  const [loading, setLoading] = useState(false);
   // const [kartu, setKartu] = useState("");
   // const [surat, setSurat] = useState("");
   // const [bukti, setBukti] = useState("");
 
   const onSubmit = (data) => {
+    setLoading(true);
     const formData = new FormData();
     formData.append("email", data.email);
     formData.append("nama", data.nama);
@@ -33,6 +36,7 @@ export default function Registration() {
       })
       .then((response) => {
         alert("Registrasi Berhasil!");
+        setLoading(false);
         navigate("/");
       })
       .catch((error) => {
@@ -43,6 +47,11 @@ export default function Registration() {
   return (
     <>
       <div className="bg-[url('../public/img/bg.png')] font-Volkswagen min-h-screen">
+        {loading && (
+          <div className="fixed w-full flex items-center justify-center h-full bg-gray-700 opacity-30 -mt-20">
+            <AiOutlineLoading className="animate-spin opacity-100" size={64} />
+          </div>
+        )}
         <h1 className="text-2xl md:text-4xl lg:text-5xl text-center py-12">
           Registration
         </h1>
