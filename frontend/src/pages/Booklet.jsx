@@ -13,7 +13,7 @@ function Booklet() {
             </div>
             <div className="w-[240px] h-[320px] md:w-[520px] md:h-[720px]">
               <iframe
-                src="https://drive.google.com/file/d/1ex_5L6OR3wT2g0MdzbsNWDzGT4QimK8A/preview"
+                src="https://drive.google.com/file/d/12sjVroWnpR-WbnYefIVCz-c5AKonjnQn/preview"
                 width="100%"
                 height="100%"
               ></iframe>
