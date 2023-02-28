@@ -117,8 +117,8 @@ export default function Registration() {
             >
               <option value="">Select one</option>
               <option value="Biology competition">Biology competition</option>
-              <option value="Public poster">Public poster</option>
-              <option value="Health speech contest">Speech</option>
+              {/* <option value="Public poster">Public poster</option>
+              <option value="Health speech contest">Speech</option> */}
             </select>
             <label>ID Line</label>
             <input
