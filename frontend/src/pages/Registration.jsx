@@ -66,7 +66,7 @@ export default function Registration() {
             Registration
           </h1>
           {true ? (
-            <section className="my-7 max-w-[2000px] mt-20 mx-48" id="event">
+            <div className="flex justify-center pb-32 px-[20px] md:px-[200px]">
               <Card isCompe={false}>
                 <div className="text-center">
                   <Title
@@ -75,7 +75,7 @@ export default function Registration() {
                   ></Title>
                 </div>
               </Card>
-            </section>
+            </div>
           ) : (
             <div className="flex justify-center pb-32 px-20 md:px-[200px]">
               <form

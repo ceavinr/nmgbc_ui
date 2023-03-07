@@ -9,20 +9,11 @@ function Home() {
       <Hero />
 
       <div className="flex w-screen flex-col">
-        <div className="flex flex-col items-center px-20 font-Volkswagen py-12 ">
+        <div className="flex flex-col items-center lg:px-20 font-Volkswagen lg:py-12 ">
           <Card>
-            <div className="flex flex-col items-center px-20 font-Volkswagen py-12">
-              {/* <Title title={"Our Sponsors"} /> */}
-              <h1>SPONSORED BY</h1>
-              <img src="/img/pln.png" width={1024} alt="" />
-              <img src="/img/bsi.jpg" width={512} alt="" />
-            </div>
-          </Card>
-        </div>
-        <div className="flex flex-col items-center px-20 font-Volkswagen py-12 ">
-          <Card>
-            <div className="flex justify-center items-center">
+            <div className="flex justify-center items-center ">
               <iframe
+                className="lg:w-[1024px] lg:h-[576px] md:w-[516px] md:h-[290.25px] w-[258px] h-[145.125px]"
                 width="1024"
                 height="576"
                 src="https://www.youtube.com/embed/0lzPSDMh8_8?controls=0&title=0&rel=0&?modestbranding=1"
@@ -31,6 +22,20 @@ function Home() {
                 allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
                 allowfullscreen
               ></iframe>
+            </div>
+          </Card>
+        </div>
+        <div className="flex flex-col items-center lg:px-20 font-Volkswagen py-12">
+          <Card>
+            <div className="flex flex-col items-center lg:px-20 font-Volkswagen lg:py-12">
+              {/* <Title title={"Our Sponsors"} /> */}
+              <h1 className="text-xs md:text-base">SPONSORED BY</h1>
+              <div className="lg:w-[1024px] md:w-[516px] w-[258px]">
+                <img src="/img/pln.png" alt="" />
+              </div>
+              <div className="lg:w-[512px] md:w-[258px] w-[129px]">
+                <img src="/img/bsi.jpg" alt="" />
+              </div>
             </div>
           </Card>
         </div>

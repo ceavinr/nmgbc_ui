@@ -3,7 +3,7 @@ import Event from "./Event";
 
 function Hero() {
   return (
-    <div className="min-h-screen w-screen bg-[#BFEEFF] pb-12">
+    <div className="w-screen bg-[#BFEEFF] pb-12">
       <div className="flex flex-col-reverse lg:flex-row items-center w-full justify-center font-Volkswagen">
         <div className="flex flex-col items-center gap-4">
           <img src="/img/hero.png" alt="" />
